@@ -19,6 +19,13 @@ pipeline{
         
             }
         }
+
+        stage('integration test'){
+            steps{
+                sh 'mvn verify -DiskpUnitTests'
+            }
+        }
+            
     }
 }
  
